@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+<style>
+button {
+  background-color: lightblue;
+  color: black;
+  padding: 40px;
+  text-align: center;
+} 
+</style>
+</head>
+<body>
+
+ 
+
+<h1>Deadline</h1>
+<input type="text" id="default_value" value="0"><br><br>
+
+ 
+
+<input type="text" id="days" ><br><br>
+
+ 
+
+<button id="reset" value="Reset" onclick="reset()">Reset</button>
+<button id="caluclate" value="calculate" onclick="cal()">calculate</button>
+<p id="display"></p>
+<script>
+function reset(){
+
+ 
+
+document.getElementById("display").innerHTML="";
+document.getElementById("days").value=0;
+
+ 
+
+}
+function cal(){
+ var p=document.getElementById("days").value;
+ y=parseInt(p)
+ var d = new Date();
+ d.setDate(d.getDate()+y)
+ document.getElementById("display").innerHTML="Project deadline is :"+d;
+ }
+ 
+</script>
+</body>
+</html>
+ 
